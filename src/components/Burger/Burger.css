@@ -5,24 +5,9 @@
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
+    overflow: scroll;
 }
-.ingredient-warning {
-    border: solid red;
-    width: 100%;
-}
-.ingredient-warning:hover {
-    background-color: black;
-    border: solid gold;
-    border-radius: 6px;
-    cursor: pointer;
-    color: white
-}
-@media (min-width: 360px)  {
-    .ingredient-warning {
-        width: 340px;
-        margin-left: 10px;
-    }
-}
+
 
 @media (min-width: 500px) and (min-height: 401px) {
     .Burger {
