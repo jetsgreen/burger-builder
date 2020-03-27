@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Layout from "../components/Layout/Layout"
 import NavBar from "../components/NavBar/NavBar"
 import Burger from "../components/Burger/Burger"
+import BuildControls from "../components/Burger/BuildControls/BuildControls"
 
 
 
@@ -9,10 +10,10 @@ export class BurgerContainer extends Component {
 
 state = {
     ingredients: {
-        salad: 1,
-        bacon: 1,
-        cheese: 2,
-        meat: 2
+        lettuce: 0,
+        bacon: 0,
+        cheese: 0,
+        meat: 0
     }
 }
 
@@ -22,9 +23,9 @@ state = {
             <Layout>
                 <NavBar />
                 <div>
-
                     <Burger ingredients={this.state.ingredients}/>
-                    <p>Build Controls</p>
+                    <BuildControls/>
+                    
                 </div>
             </Layout>
         )
