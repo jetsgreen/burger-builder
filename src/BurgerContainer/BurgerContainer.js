@@ -21,6 +21,17 @@ state = {
         meat: 0
     },
     totalPrice: 4,
+    purchaseble: false,
+}
+
+updatePurchasableHandler = (ingredients) => {
+  
+    const sum = Object.keys(ingredients).map(igKey =>{
+        return ingredients[igKey];
+    }).reduce((sum, el) => {
+        return sum + el;
+    }, 0);
+    this.setState({purchaseble: sum > 0})
 }
 
 addIngredientHandler = (type) => {
@@ -34,6 +45,7 @@ addIngredientHandler = (type) => {
     const oldPrice = this.state.totalPrice;
     const newPrice = oldPrice + priceAddition
     this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
+    this.updatePurchasableHandler(updatedIngredients);
 }
 
 deleteIngredientHandler = (type) => {
@@ -51,8 +63,10 @@ deleteIngredientHandler = (type) => {
     const oldPrice = this.state.totalPrice;
     const newPrice = oldPrice - priceDeduction
     this.setState({totalPrice: newPrice, ingredients: updatedIngredients});
+    this.updatePurchasableHandler(updatedIngredients);
 
 }
+
 
     render() {
         const disabledInfo = {
@@ -71,7 +85,9 @@ deleteIngredientHandler = (type) => {
                     ingredientAdded={this.addIngredientHandler}
                     ingredientDeducted={this.deleteIngredientHandler}
                     disabled ={disabledInfo}
-                    price={this.state.totalPrice}/>
+                    purchaseble={this.state.purchaseble}
+                    price={this.state.totalPrice}
+                    />
                     
                 </div>
             </Layout>
