@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
-import Layout from "../components/Layout/Layout"
-import NavBar from "../components/NavBar/NavBar"
-import Burger from "../components/Burger/Burger"
-import BuildControls from "../components/Burger/BuildControls/BuildControls"
+import React, { Component } from 'react';
+import Layout from "../components/Layout/Layout";
+import NavBar from "../components/NavBar/NavBar";
+import Burger from "../components/Burger/Burger";
+import BuildControls from "../components/Burger/BuildControls/BuildControls";
+import Modal from "../components/Modal/Modal";
+import OrderSummary from "../components/OrderSummary/OrderSummary"
 
 const INGREDIENT_PRICES = {
     lettuce: 0.5,
@@ -22,6 +24,11 @@ state = {
     },
     totalPrice: 4,
     purchaseble: false,
+    purchansing: false,
+}
+
+purchaseHandler = () => {
+    this.setState({purchansing: true});
 }
 
 updatePurchasableHandler = (ingredients) => {
@@ -79,6 +86,9 @@ deleteIngredientHandler = (type) => {
 
             <Layout>
                 <NavBar />
+                <Modal show={this.state.purchansing}>
+                <OrderSummary ingredients={this.state.ingredients}/>
+                </Modal>
                 <div>
                     <Burger ingredients={this.state.ingredients}/>
                     <BuildControls 
@@ -86,6 +96,7 @@ deleteIngredientHandler = (type) => {
                     ingredientDeducted={this.deleteIngredientHandler}
                     disabled ={disabledInfo}
                     purchaseble={this.state.purchaseble}
+                    ordered={this.purchaseHandler}
                     price={this.state.totalPrice}
                     />
                     
