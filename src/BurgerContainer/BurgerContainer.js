@@ -31,6 +31,15 @@ purchaseHandler = () => {
     this.setState({purchansing: true});
 }
 
+cancelOrderHandler = () => {
+    this.setState({purchansing: false});
+   
+}
+
+placeOrderHandler = () => {
+    alert("Thank you for your purchase");
+}
+
 updatePurchasableHandler = (ingredients) => {
   
     const sum = Object.keys(ingredients).map(igKey =>{
@@ -86,8 +95,12 @@ deleteIngredientHandler = (type) => {
 
             <Layout>
                 <NavBar />
-                <Modal show={this.state.purchansing}>
-                <OrderSummary ingredients={this.state.ingredients}/>
+                <Modal show={this.state.purchansing} >
+                <OrderSummary ingredients={this.state.ingredients} 
+                purchased={this.placeOrderHandler}
+                cancel={this.cancelOrderHandler}
+                price={this.state.totalPrice}/>
+                
                 </Modal>
                 <div>
                     <Burger ingredients={this.state.ingredients}/>
@@ -98,6 +111,7 @@ deleteIngredientHandler = (type) => {
                     purchaseble={this.state.purchaseble}
                     ordered={this.purchaseHandler}
                     price={this.state.totalPrice}
+                    
                     />
                     
                 </div>

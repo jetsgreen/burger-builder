@@ -1,0 +1,26 @@
+.modal-btn {
+    border-radius: 6px;
+    background-color: #AA6817;
+    color: white;
+}
+.modal-btn:hover{
+    background-color: red;
+    color: white;
+}
+.modal-btn:active{
+    background-color:red;
+    color: white;
+}
+.Button {
+    border-radius: 6px;
+    background-color: #AA6817;
+    color: white;
+   
+}
+
+.Button:hover{
+    background-color: green;
+    color: white;
+}
+
+
