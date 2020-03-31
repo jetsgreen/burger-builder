@@ -9,7 +9,7 @@
 
 }
 .link {
-    color: #8F5C2C;
+    color: white;
     box-sizing: border-box;
     display: block;
 }
@@ -28,6 +28,9 @@
         padding: 16px 10px;
         border-bottom: 4px, solid transparent;
         display: block;
+    }
+    .link :hover{
+        color: yellow;
     }
     .link:active{
         color: teal;

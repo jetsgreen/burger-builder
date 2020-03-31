@@ -27,6 +27,14 @@ state = {
     totalPrice: 4,
     purchaseble: false,
     purchansing: false,
+    showSideDrawer: true,
+    
+}
+
+sideDrawerToggleHandler = () => {
+    this.setState((prevState)=>{
+        return { showSideDrawer: ! prevState.showSideDrawer};
+    });
 }
 
 purchaseHandler = () => {
@@ -39,6 +47,7 @@ cancelOrderHandler = () => {
 }
 
 placeOrderHandler = () => {
+    this.setState({purchansing: false});
     alert("Thank you for your purchase");
 }
 
@@ -96,7 +105,9 @@ deleteIngredientHandler = (type) => {
         return (
 
             <Layout>
-                <NavBar />
+               
+             
+                <NavBar toggleClicked={this.sideDrawerToggleHandler} />
               
                 <Modal show={this.state.purchansing} >
                 <OrderSummary ingredients={this.state.ingredients} 
