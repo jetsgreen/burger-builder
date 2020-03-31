@@ -4,7 +4,9 @@ import NavBar from "../components/NavBar/NavBar";
 import Burger from "../components/Burger/Burger";
 import BuildControls from "../components/Burger/BuildControls/BuildControls";
 import Modal from "../components/Modal/Modal";
-import OrderSummary from "../components/OrderSummary/OrderSummary"
+import OrderSummary from "../components/OrderSummary/OrderSummary";
+
+
 
 const INGREDIENT_PRICES = {
     lettuce: 0.5,
@@ -95,6 +97,7 @@ deleteIngredientHandler = (type) => {
 
             <Layout>
                 <NavBar />
+              
                 <Modal show={this.state.purchansing} >
                 <OrderSummary ingredients={this.state.ingredients} 
                 purchased={this.placeOrderHandler}

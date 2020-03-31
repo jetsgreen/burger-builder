@@ -1,0 +1,37 @@
+.Navigation {
+    margin: 10px 0;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    display: block;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+.link {
+    color: #8F5C2C;
+    box-sizing: border-box;
+    display: block;
+}
+
+@media (min-width: 500px) {
+    .Navigation {
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: auto;
+    }
+    .link {
+        color: white;
+        padding: 16px 10px;
+        border-bottom: 4px, solid transparent;
+        display: block;
+    }
+    .link:active{
+        color: teal;
+    }
+
+}
+

@@ -2,9 +2,6 @@ import React from 'react';
 import BurgerContainer from './BurgerContainer/BurgerContainer';
 
 
-
-
-
 function App() {
   return (
 

@@ -2,6 +2,7 @@
     border-radius: 6px;
     background-color: #AA6817;
     color: white;
+    margin-bottom: 10px;
 }
 .modal-btn:hover{
     background-color: red;
@@ -15,12 +16,14 @@
     border-radius: 6px;
     background-color: #AA6817;
     color: white;
-   
+    margin-bottom: 10px;
 }
 
 .Button:hover{
     background-color: green;
     color: white;
 }
+
+
 
 

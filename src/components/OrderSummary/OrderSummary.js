@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../components/Layout/Layout";
 import "./OrderSummary.css";
 
+
 const OrderSummary = (props) => {
     const indgredientSummary = Object.keys(props.ingredients).map(igKey => {
 
@@ -12,16 +13,17 @@ const OrderSummary = (props) => {
 
     return (
         <Layout>
-            <h3>Order Summary</h3>
-            <p>ingredients Chosen</p>
+          <div className="order-content">
+            <h1>Order Summary</h1>
+            <p>Ingredients Chosen</p>
             <ul>
                 {indgredientSummary}
             </ul>
-            <p><strong>Order Total: {props.price}</strong></p>
+            <p><strong>Order Total: {props.price.toFixed(2)}</strong></p>
             <p>Continue to Checkout</p>
             <button className="Button" onClick={props.purchased}>Place Order</button>
             <button className="modal-btn" onClick={props.cancel}>Cancel Order</button>
-
+        </div>
         </Layout>
     )
 

@@ -10,6 +10,7 @@
     top: 30%;
     box-sizing: border-box;
     transition: all 0.5s ease-out;
+    
 }
 
 
@@ -19,3 +20,4 @@
         left: calc(50% - 250px);
     }
 }
+
