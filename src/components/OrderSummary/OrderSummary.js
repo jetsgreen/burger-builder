@@ -2,7 +2,6 @@ import React from "react";
 import Layout from "../../components/Layout/Layout";
 import "./OrderSummary.css";
 
-
 const OrderSummary = (props) => {
     const indgredientSummary = Object.keys(props.ingredients).map(igKey => {
 
