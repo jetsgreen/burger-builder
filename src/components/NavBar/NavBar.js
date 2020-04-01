@@ -3,6 +3,7 @@ import "./NavBar.css";
 import Navigation from "../Navigation/Navigation";
 
 
+
 const NavBar = () => {
 
     return (
@@ -12,7 +13,7 @@ const NavBar = () => {
               
                 <div className="DesktopOnly">
                     <Navigation/>
-                    
+             
                 </div>
         
             </header>

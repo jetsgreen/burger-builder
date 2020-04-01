@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navigation.css";
+import Logo from "../Logo/Logo"
 
 
 const Navigation =()=> {
@@ -14,7 +15,9 @@ const Navigation =()=> {
                 <a className="link" href="/">Checkout</a>
                 </li>
                 <li>
-                    
+                <div className="logo">
+                        <Logo/>
+                    </div>
                 </li>
             </ul>
 

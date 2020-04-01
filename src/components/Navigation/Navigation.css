@@ -13,6 +13,9 @@
     box-sizing: border-box;
     display: block;
 }
+.link:hover {
+    color: black;
+}
 
 @media (min-width: 500px) {
     .Navigation {
@@ -37,4 +40,12 @@
     }
 
 }
+@media(max-width: 499px) {
+    .logo{
+        display: none;
+    }
+}
+
+
+
 
