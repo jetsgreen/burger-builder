@@ -3,7 +3,7 @@ import "./NavBar.css";
 import Navigation from "../Navigation/Navigation";
 
 
-const NavBar = (props) => {
+const NavBar = () => {
 
     return (
         <div className="NavBar">
