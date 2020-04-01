@@ -9,10 +9,10 @@ const Navigation =()=> {
             
             <ul className="Navigation">
                 <li>
-                <a className="link" href="/">Burger Builder</a>
+                <p className="link">Burger Builder</p>
                 </li>
                 <li>
-                <a className="link" href="/">Checkout</a>
+                <p className="link" >Checkout</p>
                 </li>
                 <li>
                 <div className="logo">
